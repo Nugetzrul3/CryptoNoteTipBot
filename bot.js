@@ -218,7 +218,7 @@ function checkCommand(msg) {
 				var helpEmbed = new Discord.RichEmbed()
 				.setTitle("Welcome to Uplexa TipBot (Prefix: !tipupx)")
 				.setColor("#1fa71f")
-				.setThumbnail(URL = "https://github.com/uPlexa/uplexa-gui/blob/master/images/appicons/256x256.png")
+				.setThumbnail(URL = "https://raw.githubusercontent.com/uPlexa/uplexa-gui/master/images/appicons/256x256.png")
 				.addField("help", "The command you just typed :grin: . Returns this command list")
 				.addField("deposit", "Generates a Uplexa address to deposit for tipping (Replies in DM)")
 				.addField("withdraw", "Use this command in a DM to withdraw UPX from your TipBot wallet")
