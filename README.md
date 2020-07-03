@@ -1,4 +1,4 @@
-# Dero TipBot
+# Uplexa TipBot
 
 ### This Should work with Monero, and any fork that uses 12-decimals
 
