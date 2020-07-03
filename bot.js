@@ -165,7 +165,7 @@ function logLocalTransaction(from, to, fromname, toname, amount) {
 	});
 }
 function isCallingBot(msg) {
-	if (msg.substring(0, 8) == "!tipupx") {
+	if (msg.substring(0, 7) == "!tipupx") {
 		return true;
 	} else { return false; }
 
@@ -215,7 +215,7 @@ function checkCommand(msg) {
 				});
 				break;
 			case 'help':
-				var helpEmbed = Discord.RichEmbed()
+				var helpEmbed = new Discord.RichEmbed()
 				.setTitle("Welcome to Uplexa TipBot (Prefix: !tipupx)")
 				.setColor("#1fa71f")
 				.setThumbnail(URL = "https://github.com/uPlexa/uplexa-gui/blob/master/images/appicons/256x256.png")
@@ -223,8 +223,8 @@ function checkCommand(msg) {
 				.addField("deposit", "Generates a Uplexa address to deposit for tipping (Replies in DM)")
 				.addField("withdraw", "Use this command in a DM to withdraw UPX from your TipBot wallet")
 				.addField("mybalance", "Returns your current unlocked balance")
-				.addField("tip `@user` `amount`", "Tip a specified user an amount of UPX. Example: `!tipupx tip @Too tall for u 1`")
-				msg.reply(helpEmbed)
+				.addField("tip `@user` `amount`", "Tip a specified user an amount of UPX. Example: `!tipupx tip @Too tall for u 1`");
+				msg.reply(helpEmbed);
 				break;
 			case 'mybalance':
 				getBalance(msg.author.id, msg, function (data) {
