@@ -97,7 +97,7 @@ function getWalletInfo(callback) {
 			Wallet.balance().then(function (balance) {
 
 
-				callback("Current wallet height is:" + data.height + " . Current wallet balance is: " + getReadableFloatBalanceFromWalletFormat(balance.balance).toFixed(coin_total_units) + " . Current unlocked balance is: " + getReadableFloatBalanceFromWalletFormat(balance.unlocked_balance).toFixed(coin_total_units));
+				callback("Current wallet height is: " + data.height + " . Current wallet balance is: " + getReadableFloatBalanceFromWalletFormat(balance.balance).toFixed(coin_total_units) + " . Current unlocked balance is: " + getReadableFloatBalanceFromWalletFormat(balance.unlocked_balance).toFixed(coin_total_units));
 
 			});
 
@@ -215,7 +215,16 @@ function checkCommand(msg) {
 				});
 				break;
 			case 'help':
-				msg.author.send("Hello! Welcome to Uplexa TipBot help section. \n To get your balance, type \"!tipupx mybalance\" \n For deposits, type \"!tipupx deposit\" \n For withdrawals, type \"!tipupx withdraw <walletaddress> <amount>\" (withdrawal fee is " + withdraw_tx_fees + " " + coin_name + ".), minimum withdrawal amount is " + withdraw_min_amount + " " + coin_name + ". \n To tip someone, type \"!tipupx tip <user_mention> <amount> <Optional: small message>\" \n We are not responsible for any system abuse, please don't deposit/leave big amounts ");
+				var helpEmbed = Discord.RichEmbed()
+				.setTitle("Welcome to Uplexa TipBot (Prefix: !tipupx)")
+				.setColor("#1fa71f")
+				.setThumbnail(URL = "https://github.com/uPlexa/uplexa-gui/blob/master/images/appicons/256x256.png")
+				.addField("help", "The command you just typed :grin: . Returns this command list")
+				.addField("deposit", "Generates a Uplexa address to deposit for tipping (Replies in DM)")
+				.addField("withdraw", "Use this command in a DM to withdraw UPX from your TipBot wallet")
+				.addField("mybalance", "Returns your current unlocked balance")
+				.addField("tip `@user` `amount`", "Tip a specified user an amount of UPX. Example: `!tipupx tip @Too tall for u 1`")
+				msg.reply(helpEmbed)
 				break;
 			case 'mybalance':
 				getBalance(msg.author.id, msg, function (data) {
