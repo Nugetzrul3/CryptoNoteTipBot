@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 var bot = new Discord.Client();
 const safeJsonStringify = require('safe-json-stringify');
 var crypto = require('crypto');
-var moneroWallet = require('monero-nodejs');
+var moneroWallet = require('uplexa-nodejs');
 var Big = require('big.js');
 var config = require('./bot_config');
 
