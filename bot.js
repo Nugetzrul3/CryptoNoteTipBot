@@ -219,11 +219,11 @@ function checkCommand(msg) {
 				.setTitle("Welcome to Uplexa TipBot (Prefix: !tipupx)")
 				.setColor("#1fa71f")
 				.setThumbnail(URL = "https://raw.githubusercontent.com/uPlexa/uplexa-gui/master/images/appicons/256x256.png")
-				.addField("help", "The command you just typed :grin: . Returns this command list")
-				.addField("deposit", "Generates a Uplexa address to deposit for tipping (Replies in DM)")
-				.addField("withdraw", "Use this command in a DM to withdraw UPX from your TipBot wallet")
-				.addField("mybalance", "Returns your current unlocked balance")
-				.addField("tip `@user` `amount`", "Tip a specified user an amount of UPX. Example: `!tipupx tip @Too tall for u 1`");
+				.addField("`help`", "The command you just typed returns this command list. :grin:")
+				.addField("`deposit`", "Generates a uPlexa address so you can deposit for tipping.\n\xa0\xa0\xa0\xa0(Replies in DM)")
+				.addField("`withdraw`", "Use this command in a DM to withdraw uPlexa\n\xa0\xa0\xa0\xa0from your TipBot wallet.")
+				.addField("`mybalance`", "Returns your current unlocked balance.")
+				.addField("`tip` **@user** **amount**", "Tip a specified user an amount of uPlexa.\n\xa0\xa0\xa0\xa0Example: **!tipupx tip @Too tall for u 1**");
 				msg.reply(helpEmbed);
 				break;
 			case 'mybalance':
