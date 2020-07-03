@@ -1,9 +1,10 @@
 {
   "name": "uplexa-tipbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tipbot used for Uplexa official Discord server",
   "main": "bot.js",
   "author": "",
+  "maintainer": "Nugetzrul3 && LOUD-Mining",
   "license": "ISC",
   "dependencies": {
     "big.js": "^5.0.3",
@@ -11,5 +12,9 @@
     "mongodb": "^3.1.0-beta4",
     "safe-json-stringify": "^1.1.0",
     "uplexa-nodejs": "git+https://github.com/uPlexa/uplexa-nodejs.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nugetzrul3/UplexaTipBot.git"
   }
 }
