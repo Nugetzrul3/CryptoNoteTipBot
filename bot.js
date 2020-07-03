@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 var bot = new Discord.Client();
 const safeJsonStringify = require('safe-json-stringify');
 var crypto = require('crypto');
-var moneroWallet = require('uplexa-nodejs');
+var UplexaWallet = require('uplexa-nodejs');
 var Big = require('big.js');
 var config = require('./bot_config');
 
 
-var Wallet = new moneroWallet(config.wallethostname, config.walletport);
+var Wallet = new UplexaWallet(config.wallethostname, config.walletport);
 
 
 
