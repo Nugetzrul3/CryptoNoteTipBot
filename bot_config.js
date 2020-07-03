@@ -1,7 +1,7 @@
 module.exports = { 
 
 wallethostname: "127.0.0.1",
-walletport : 18092,
+walletport : 21065,
 bot_token : "",
 mongodburl: "mongodb://localhost:27017/upxTipBot",
 
